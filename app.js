@@ -9,8 +9,6 @@ var toggleActiveClass = function() {
     var servicesElement =  document.querySelector('.services');
 
     homeElement.addEventListener('click', function(e) {
-        // e.preventDefault();
-
         if(!(this.classList.contains('active-nav-item'))) {
             this.classList.add('active-nav-item')
         } else if(dashElement.classList.contains('active-nav-item')) {
@@ -22,8 +20,6 @@ var toggleActiveClass = function() {
 
 
     dashElement.addEventListener('click', function(e) {
-        // e.preventDefault();
-
         if(!(this.classList.contains('active-nav-item'))) {
             this.classList.add('active-nav-item')
         } else if(homeElement.classList.contains('active-nav-item')) {
@@ -34,8 +30,6 @@ var toggleActiveClass = function() {
     })
 
     servicesElement.addEventListener('click', function(e) {
-        // e.preventDefault();
-
         if(!(this.classList.contains('active-nav-item'))) {
             this.classList.add('active-nav-item')
         } else if(dashElement.classList.contains('active-nav-item')) {
@@ -53,14 +47,6 @@ var toggleLeftNav = function() {
     caretElement.addEventListener('click', function(e) {
         leftNavUl.classList.toggle('toggle-left-nav-window');
         caretElement.classList.toggle('caret-rotate');
-
-        // if(leftNavUl.classList.contains('toggle-left-nav-window')) {
-        //     leftNavUl.classList.toggle('toggle-left-nav-window')
-        //     caretElement.classList.toggle('caret-rotate')
-        // } else {
-        //     leftNavUl.classList.add('toggle-left-nav-window')
-        //     caretElement.classList.add('caret-rotate')
-        // }
     })
 }
 
