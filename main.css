@@ -83,14 +83,15 @@ a:link, a:visited {
     
 }
 
-.left-nav ul {
+.left-nav-ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     padding-top: 20px;
     width: 250px;
     min-height: 100vh;
-    background: linear-gradient(#101010 75%, #404040 100%)
+    background: linear-gradient(#101010 75%, #404040 100%);
+    transition: width 350ms ease;
 }
 
 .left-nav a {
@@ -122,6 +123,31 @@ a:link, a:visited {
     height: 25px;
     width: 25px;
     padding-right: 20px;
+}
+
+.active-nav-item {
+    opacity: 1;
+    border-left: 4px solid #1272b2;
+    background-position: left bottom;
+}
+
+.toggle-left-nav-window {
+    width: 65px!important
+}
+
+.caret {
+    font-size: 20px;
+    color: #ccc;
+    position: absolute;
+    top: 850px;
+    left: 194px;
+    cursor: pointer;
+    transition: all 350ms ease;
+}
+
+.caret-rotate {
+    transform: rotate(-180deg);
+    left: 39px;
 }
 
 
