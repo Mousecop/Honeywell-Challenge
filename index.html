@@ -31,19 +31,20 @@
 
     <!-- Left Nav -->
     <nav class="left-nav">
-        <ul>
-            <li class="left-nav-item home">
+        <ul class="left-nav-ul">
+            <li class="left-nav-item home" onclick="toggleActiveClass()">
                 <img src="./images/home.svg" alt="" class="left-nav-icon">
                 <a href="">Home</a>
             </li>
-            <li class="left-nav-item dashboard">
+            <li class="left-nav-item dashboard" onclick="toggleActiveClass()">
                 <img src="./images/user.svg" alt="" class="left-nav-icon">
                 <a href="">Dashboard</a>
             </li>
-            <li class="left-nav-item more">
+            <li class="left-nav-item services" onclick="toggleActiveClass()">
                 <img src="./images/more.svg" alt="" class="left-nav-icon">
                 <a href="">Services</a>
             </li>
+            <span class="caret"><</span>
         </ul>
     </nav>
 </body>
