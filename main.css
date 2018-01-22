@@ -25,7 +25,6 @@ a:link, a:visited {
 .nav li {
     color: #FFF;
     display: inline-block;
-    margin-left: 5px;
     /*background-color: #333;*/
     /* padding: 13px 15px; */
 }
@@ -51,17 +50,32 @@ a:link, a:visited {
 
 .profile-container {
     width: 175px;
+    height: 50px;
     display: inline-block;
+    background-color: transparent;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.profile-container-toggle {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .profile-name {
     position: relative;
     bottom: 5px;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    margin-left: 0px!important;
+}
+
+.profile-name-toggle {
+    right: 20px;
 }
 
 .profile-image-container {
     display: inline;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .profile-image-link {
@@ -75,8 +89,92 @@ a:link, a:visited {
     border-radius: 50px;
     position: relative;
     top: 7px;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    transform: scale(1,1);
+    opacity: 1;
 }
 
+.x-icon {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    opacity: 0;
+    display: block;
+    top: -30px;
+    left: 3px;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    transform: scale(0,0);
+}
+
+.x-icon-toggle {
+    opacity: 1;
+    transform: scale(1,1);
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.profile-image-click {
+    transform: scale(0,0);
+    opacity: 0;
+}
+
+.dropdown-menu {
+    border: 1px solid transparent;
+    height: 150px;
+
+    position: relative;
+    top: -20px;
+}
+
+.dropdown-menu-ul {
+    -webkit-box-shadow: 0px 6px 19px 0px rgba(160,160,160,1);
+    -moz-box-shadow: 0px 6px 19px 0px rgba(160,160,160,1);
+    box-shadow: 0px 6px 19px 0px rgba(160,160,160,1);
+    /* filter: drop-shadow(0 0 40px #a0a0a0); */
+    width: 175px;
+    height: 0px;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+.dropdown-menu-ul-toggle {
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+    height: 150px;
+}
+
+.dropdown-item {
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    color: #101010!important;
+    display: block!important;
+    text-align: left!important;
+    height: 50px;
+    opacity: 0;
+}
+
+.slide-item {
+    transition: transform 100ms;
+}
+
+.slide-item-toggle {
+    transform: translateX(20px);
+}
+
+.dropdown-item-toggle {
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    opacity: 1;
+}
+
+.span-item {
+    padding-top: 18px;
+    display: block;
+}
+
+/* LEFT NAV STYLES */
 .left-nav {
     margin-top: 50px;
     height: 100vh;
@@ -91,7 +189,8 @@ a:link, a:visited {
     width: 250px;
     min-height: 100vh;
     background: linear-gradient(#101010 75%, #404040 100%);
-    transition: width 350ms ease;
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
 }
 
 .left-nav a {
@@ -142,6 +241,7 @@ a:link, a:visited {
     top: 850px;
     left: 194px;
     cursor: pointer;
+    -webkit-transition: all 350ms ease;
     transition: all 350ms ease;
 }
 
